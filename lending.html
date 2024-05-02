@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration Page</title>
+<style>
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 400px; /* Increased width */
+        text-align: center; /* Center align content */
+    }
+
+    button {
+            padding: 10px 20px;
+            background-color: #7c8184;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+    }
+</style>
+</head>
+<body>
+
+<button onclick="showLoginPopup()">Вход</button>
+<button onclick="showRegistrationPopup()">Регистрация</button>
+
+<div id="loginPopup" class="popup">
+    <h2>Вход</h2>
+    <input type="text" placeholder="Логин"><br>
+    <input type="password" placeholder="Пароль"><br>
+    <button onclick="login()">Войти</button>
+</div>
+
+<div id="registrationPopup" class="popup">
+    <h2>Регистрация</h2>
+    <input type="email" placeholder="Почта"><br>
+    <input type="text" placeholder="Придумайте Логин"><br>
+    <input type="password" placeholder="Придумайте Пароль"><br>
+    <input type="password" placeholder="Повторите Пароль"><br>
+    <button onclick="register()">Зарегистрироваться</button>
+</div>
+
+<script>
+    function showLoginPopup() {
+        document.getElementById('loginPopup').style.display = 'block';
+    }
+
+    function showRegistrationPopup() {
+        document.getElementById('registrationPopup').style.display = 'block';
+    }
+
+    function login() {
+        // Add login logic here
+        alert('Logging in...');
+    }
+
+    function register() {
+        // Add registration logic here
+        alert('Registering...');
+    }
+</script>
+
+</body>
+</html>
